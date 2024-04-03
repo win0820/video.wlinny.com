@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wlinny video</title>
+</head>
+<body>
+    <script>
+        // 函數來獲取URL參數的值
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // 獲取id參數的值
+        var idValue = getParameterByName('id');
+
+        // 根據id的值執行相應的跳轉
+        if (idValue === '1') {//第一版影片
+            window.location.href = 'https://drive.google.com/file/d/16xYZylFWBDPoaC5nL8feKKA9ewzhRPRc/view';
+        } else {
+            window.location.href = 'http://wlinny.com';    
+        }
+    </script>
+</body>
+</html>
