@@ -21,9 +21,14 @@
         var idValue = getParameterByName('id');
 
         // 根據id的值執行相應的跳轉
-        if (idValue === '1') {//第一版影片
+        if (idValue === '1') {//電子方塊第一版影片
             window.location.href = 'https://drive.google.com/file/d/16xYZylFWBDPoaC5nL8feKKA9ewzhRPRc/view';
-        } else {
+        } else if (idValue === '2') {//卡諾圖線上模擬器(課本用)
+            window.location.href = 'https://sublime.tools/zh/%E5%8D%A1%E8%AF%BA%E5%9B%BE';
+        } else if(idValue === '3'){ //課本模擬軟體路徑(課本用)
+            window.location.href = 'http://simul.wlinny.com/#/';
+        }
+        else{
             window.location.href = 'http://wlinny.com';    
         }
     </script>
